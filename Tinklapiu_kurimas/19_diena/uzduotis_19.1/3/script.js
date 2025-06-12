@@ -1,7 +1,12 @@
 "use strict";
 
-function doCalculations() {
-  let textBox1 = document.getElementsByName("firstNumber").value;
-  let textBox2 = document.getElementsByName("secondNumber").value;
-  alert(textBox1 + " + " + textBox2);
-}
+const form = document.getElementById("form1");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  let textBox1 = document.getElementById("input1").value;
+  let textBox2 = document.getElementById("input2").value;
+
+  document.getElementById("sum").innerHTML = +textBox1 + +textBox2;
+});
